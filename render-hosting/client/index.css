@@ -1,0 +1,128 @@
+:root {
+    --azure-100: #007FFF;
+    --azure-200: #005EB8;
+    --charcoal-100: #333;
+    --charcoal-200: #666;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+#todos {
+    width: 33.333333%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    background: var(--azure-100);
+    overflow-y: scroll;
+}
+
+#todos::-webkit-scrollbar {
+    width: 5px;
+    background: var(--azure-100);
+}
+
+#todos::-webkit-scrollbar-thumb {
+    width: 100%;
+    background: lightgrey;
+}
+
+.todo {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background: white;
+}
+
+.todo h3 {
+    font-size: large;
+    font-weight: 600;
+}
+
+.todo p {}
+
+.todo div {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 0.25rem;
+}
+
+
+#todo-form {
+    max-height: 75%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.25);
+}
+
+#todo-form div {
+    display: flex;
+    flex-direction: column;
+}
+
+#todo-form div label {
+    font-size: small;
+}
+
+#todo-form div input,
+#todo-form div textarea {
+    padding: 0.5rem 0.5rem 0.5rem 0.25rem;
+    border: solid 2px var(--charcoal-200);
+    border-radius: 6px;
+}
+
+#todo-form div input:focus,
+#todo-form div textarea:focus {
+    border: solid 2px var(--charcoal-100);
+}
+
+#todo-form div textarea {
+    max-height: 5rem;
+    resize: vertical;
+}
+
+#todo-form div input[type='date'] {
+    position: relative;
+}
+
+#todo-form div input[type='date']::-webkit-calendar-picker-indicator {
+    height: auto;
+    width: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+#todo-form div textarea {
+    outline: none;
+}
+
+#todo-form button {
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    margin: 0 auto;
+    background: var(--azure-100);
+    color: white;
+    cursor: not-allowed;
+    transition: all 0.3s;
+}
