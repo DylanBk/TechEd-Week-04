@@ -1,0 +1,28 @@
+{
+    "todos": [
+        {
+            "id": 0,
+            "title": "Check weather",
+            "deadline": "24-05-2025",
+            "completed": true
+        },
+        {
+        "id": 1,
+        "title": "Buy groceries",
+        "deadline": "24-05-2025",
+        "completed": false
+        },
+        {
+        "id": 2,
+        "title": "Walk the dog",
+        "deadline": "24-05-2025",
+        "completed": false
+        },
+        {
+        "id": 3,
+        "title": "Read for 1 hour",
+        "deadline": "24-05-2025",
+        "completed": false
+        }
+    ]
+}

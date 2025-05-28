@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechEd - To-Do List</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="h-20 w-full fixed inset-0 flex flex-row items-center p-4 shadow-lg">
+        <h1 class=" text-3xl font-bold">Notely</h1>
+    </header>
+
+    <main class="h-screen flex flex-row pt-20">
+        <div id="todos" class="flex flex-col">
+            <h2 class="my-2 text-xl text-center text-white font-bold">To-Dos</h2>
+        </div>
+
+        <div class="h-full w-full flex flex-row items-center justify-center">
+            <form id="todo-form">
+                <h2 class="text-xl text-center font-bold">Create To-Do</h2>
+                <div>
+                    <label for="title">Title:</label>
+                    <input name="title" type="text" placeholder="Enter title..." required />
+                </div>
+
+                <div>
+                    <label for="deadline">Deadline:</label>
+                    <input name="deadline" type="date" min="" required />
+                </div>
+
+                <div>
+                    <label for="description">Description:</label>
+                    <textarea name="description" placeholder="Enter description..." required>
+                    </textarea>
+                </div>
+
+                <button type="submit" disabled="true">Create</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
