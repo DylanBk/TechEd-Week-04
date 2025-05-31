@@ -6,4 +6,4 @@ if (window.location.hostname === 'localhost' || window.location.hostname === '12
     env = 'production';
 }
 
-export const API_URL = env === 'development' ? 'http://localhost:5000' : '#';
+export const API_URL = env === 'development' ? 'http://localhost:5000' : 'https://teched-week-04.onrender.com';
