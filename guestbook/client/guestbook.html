@@ -12,82 +12,85 @@
     <div id="overlay"></div>
 
     <header>
-        <h1>GuestNotes</h1>
+        <a href="/">
+            <img src="./src/assets/media/icons/logo.svg" aria-hidden="true">
+            <h1>GuestNotes</h1>
+        </a>
     
         <nav>
             <a href="/">Home</a>
             <a href="/guestbook">Guestbook</a>
         </nav>
-        </header>
+    </header>
 
-        <main>
-            <div id="heading">
-                <h2 class="playwrite">Try our Demo!</h2>
-                <p class="inter">No need to install anything or sign up to anything.</p>
-            </div>
+    <main>
+        <div id="heading">
+            <h2 class="playwrite">Try our Demo!</h2>
+            <p class="inter">No need to install anything or sign up to anything.</p>
+        </div>
 
-            <button id="add-note-btn">Add Note</button>
+        <button id="add-note-btn">Add Note</button>
 
-            <div id="guestbook">
-                <form id="add-note-form">
-                    <h3 class="playwrite">Add Your Experience</h3>
+        <div id="guestbook">
+            <form id="add-note-form">
+                <h3 class="playwrite">Add Your Experience</h3>
 
-                    <div>
-                        <input
-                            name="name"
-                            type="text"
-                            placeholder="Your Name"
-                            required
-                        />
-                        <label for="name">Your Name:</label>
-                    </div>
-
-                    <fieldset id="star-rating">
-                        <label for="star-rating">How was your experience?</label>
-
-                        <div>
-                            <img src="./src/assets/media/icons/star-default.svg" alt="1 Star">
-                            <img src="./src/assets/media/icons/star-default.svg" alt="2 Stars">
-                            <img src="./src/assets/media/icons/star-default.svg" alt="3 Stars">
-                            <img src="./src/assets/media/icons/star-default.svg" alt="4 Stars">
-                            <img src="./src/assets/media/icons/star-default.svg" alt="5 Stars">
-                        </div>
-
-                        <input
-                            name="star-rating"
-                            type="hidden"
-                            value="-1"
-                            required
-                        />
-                    </fieldset>
-
-                    <div>
-                    <textarea
-                        name="note"
-                        placeholder="Your note here..."
-                        maxlength="1000"
-                        required>
-                    </textarea>
-                    <label for="note">Describe your experience</label>
+                <div>
+                    <input
+                        name="name"
+                        type="text"
+                        placeholder="Your Name"
+                        required
+                    />
+                    <label for="name">Your Name:</label>
                 </div>
 
-                    <div id="form-buttons">
-                        <button
-                            id="close-note-btn"
-                            type="button"
-                            onclick="e.preventDefault()">
-                            Cancel
-                        </button>
+                <fieldset id="star-rating">
+                    <label for="star-rating">How was your experience?</label>
 
-                        <button
-                            type="submit">
-                            Submit
-                        </button>
+                    <div>
+                        <img src="./src/assets/media/icons/star-default.svg" alt="1 Star">
+                        <img src="./src/assets/media/icons/star-default.svg" alt="2 Stars">
+                        <img src="./src/assets/media/icons/star-default.svg" alt="3 Stars">
+                        <img src="./src/assets/media/icons/star-default.svg" alt="4 Stars">
+                        <img src="./src/assets/media/icons/star-default.svg" alt="5 Stars">
                     </div>
-                </form>
 
-                <section id="notes"></section>
+                    <input
+                        name="star-rating"
+                        type="hidden"
+                        value="-1"
+                        required
+                    />
+                </fieldset>
+
+                <div>
+                <textarea
+                    name="note"
+                    placeholder="Your note here..."
+                    maxlength="1000"
+                    required>
+                </textarea>
+                <label for="note">Describe your experience</label>
             </div>
-        </main>
+
+                <div id="form-buttons">
+                    <button
+                        id="close-note-btn"
+                        type="button"
+                        onclick="e.preventDefault()">
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit">
+                        Submit
+                    </button>
+                </div>
+            </form>
+
+            <section id="notes"></section>
+        </div>
+    </main>
 </body>
 </html>
