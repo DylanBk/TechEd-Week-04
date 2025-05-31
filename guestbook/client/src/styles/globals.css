@@ -48,7 +48,20 @@ header {
     background: var(--bg);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-header h1 {
+
+header a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header a img {
+    height: 2rem;
+    user-select: none;
+}
+
+header a h1 {
+    color: var(--text);
     font-family: 'Playwrite';
 }
 
