@@ -1,0 +1,27 @@
+:root {
+    --bg: #FFF;
+    --primary: #2563EB;
+    --secondary: #10B981;
+    --text: #1F2937;
+    --placeholder-text: #6B7280;
+    --input-bg: #F3F4F6;
+    --input-border: #D1D5DB;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-VariableFont_opsz\,wght.ttf');
+}
+
+@font-face {
+    font-family: 'Playwrite';
+    src: url('../assets/fonts/PlaywriteDEGrund-VariableFont_wght.ttf');
+}
+
+.inter {
+    font-family: 'Inter';
+}
+
+.playwrite {
+    font-family: 'Playwrite';
+}

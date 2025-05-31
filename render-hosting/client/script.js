@@ -1,3 +1,5 @@
+const api = 'https://teched-week-04.onrender.com';
+
 const todos = document.querySelector('#todos');
 const todoForm = document.querySelector('#todo-form');
 
@@ -28,7 +30,7 @@ const handleLoad = async () => {
 };
 
 const getTodos = async () => {
-    const req = await fetch('http://localhost:5000/todos/get-all', {
+    const req = await fetch(`${api}/todos/get-all`, {
         method: 'GET'
     });
     const data = await req.json();
