@@ -1,4 +1,8 @@
-import {API_URL} from '../../config';
+import { API_URL } from '../../config';
+
+import goldStar from '../assets/media/icons/star-gold.svg';
+import defaultStar from '../assets/media/icons/star-default.svg';
+import tickIcon from '../assets/media/icons/tick.svg';
 
 const overlay = document.querySelector('#overlay');
 const guestbook = document.querySelector('#guestbook');
@@ -25,7 +29,7 @@ const handleLoad = async () => {
         for (let i = 0; i < 5; i++) {
             const star = document.createElement('img');
 
-            star.src = i <= n.rating ? './src/assets/media/icons/star-gold.svg' : './src/assets/media/icons/star-default.svg';
+            star.src = i <= n.rating ? goldStar : defaultStar;
 
             rating.appendChild(star);
         };
@@ -118,7 +122,7 @@ const handleFormSubmit = async (e) => {
             handleLoad();
         }, 3000);
     } else {
-        console.error('bruh');
+        console.error('Internal Server Error');
     }
 };
 
@@ -129,20 +133,20 @@ let selectedRating = -1; // -1 = none, elements start at 0
 Array.from(starRating.children[1].children).forEach((el, idx, stars) => {
     el.addEventListener('mouseover', () => {
         stars.forEach((star, i) => {
-            star.src = i <= idx ? './src/assets/media/icons/star-gold.svg' : './src/assets/media/icons/star-default.svg';
+            star.src = i <= idx ? goldStar : defaultStar;
         });
     });
 
     el.addEventListener('mouseout', () => {
         stars.forEach((star, i) => {
-            star.src = i <= selectedRating ? './src/assets/media/icons/star-gold.svg' : './src/assets/media/icons/star-default.svg';
+            star.src = i <= selectedRating ? goldStar : defaultStar;
         });
     });
 
     el.addEventListener('click', () => {
         selectedRating = idx;
         stars.forEach((star, i) => {
-            star.src = i <= selectedRating ? './src/assets/media/icons/star-gold.svg' : './src/assets/media/icons/star-default.svg';
+            star.src = i <= selectedRating ? goldStar : defaultStar;
         });
 
         starRating.children[2].value = idx;
