@@ -15,8 +15,6 @@ const notes = document.querySelector('#notes');
 const handleLoad = async () => {
     const notesData = await getNotes();
 
-    console.log(notesData || 'No data available');
-
     Array.from(notesData.data).forEach((n,i) => {
         const note = document.createElement('div');
         const rating = document.createElement('div');
@@ -39,8 +37,6 @@ const handleLoad = async () => {
         note.appendChild(content);
         note.classList.add('note');
         note.id = i;
-
-        console.log(note)
 
         notes.appendChild(note);
     });
@@ -76,9 +72,7 @@ const handleFormSubmit = async (e) => {
     e.preventDefault();
 
     const formData = new FormData(noteForm);
-    console.log('formData', formData);
-    const formDataObj = Object.fromEntries(formData)
-    console.log('formDataObj', formDataObj);
+    const formDataObj = Object.fromEntries(formData);
 
     const rating = starRating.children[2].value;
 
@@ -123,7 +117,7 @@ const handleFormSubmit = async (e) => {
         }, 3000);
     } else {
         console.error('Internal Server Error');
-    }
+    };
 };
 
 noteForm.addEventListener('submit', handleFormSubmit);
