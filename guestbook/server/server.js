@@ -13,8 +13,6 @@ dotenv.config();
 const port = process.env.PORT;
 const app = express();
 
-console.log(process.env.CLIENT_URL)
-
 app.use(cors({
     credentials: true,
     origin: process.env.CLIENT_URL
@@ -48,8 +46,6 @@ app.get('/get-notes', async (req, res) => {
 });
 
 app.post('/add-note', async (req, res) => {
-    console.log(req.body);
-
     const data = {
         rating: req.body['star-rating'],
         content: req.body['note'],
